@@ -1,5 +1,5 @@
 # Chat
-Steps you carried out for this process
+Steps I carried out for this process
 
 1. Made 2 buttons for the main page.
   - Got the button id from the xml file.
@@ -29,3 +29,14 @@ Steps you carried out for this process
 6. Made UI little bit better
   - Made buttonshape.xml to design the buttons for the main page
   - Modified xml files to make UI better
+
+
+Instruction
+
+1. Select Interpreter / Client.
+2. Client page
+- Select the language you want to translate and send the message to interpreter by clicking the send button
+- Check the mailbox to view your translated messages
+3. Interpreter page
+- Check the mailbox to check the message you got
+- Resend translated message to clients by clicking the resend button

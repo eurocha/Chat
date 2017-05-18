@@ -72,7 +72,7 @@ public class ClientPage extends AppCompatActivity {
         }
         //===========Button Click Event for opening the mailbox============================
         public void onClick(View view) {
-            Intent intent  = new Intent(this, ViewDatabase2.class);
+            Intent intent  = new Intengit t(this, ViewDatabase2.class);
             startActivity(intent);
         }
 }
