@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/bt_update"
-        android:text="@string/resend"
+        android:text="Resend"
         android:layout_below="@+id/et_newData"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@string/mailbox"
+        android:text="MailBox"
         android:layout_below="@+id/bt_update"
         android:layout_centerHorizontal="true" />
 
