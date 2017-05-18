@@ -28,7 +28,6 @@ public class ViewDatabase extends AppCompatActivity {
         myRef = database.getReference("Client");
         //========Listview setup================================
         listView = (ListView)findViewById(R.id.listView);
-
         //====== Reading from the database==================================
         myRef.addValueEventListener(new ValueEventListener() {
             public static final String TAG ="ViewDatabase";
@@ -54,8 +53,6 @@ public class ViewDatabase extends AppCompatActivity {
         }
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
         listView.setAdapter(adapter);
-
-
     }
 
 }

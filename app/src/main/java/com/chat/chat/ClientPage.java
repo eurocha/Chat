@@ -1,6 +1,5 @@
 package com.chat.chat;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class ClientPage extends AppCompatActivity {
-
-
         private static final String TAG = "ClientPage";
         FirebaseDatabase database;
         DatabaseReference myRef;
@@ -43,7 +40,6 @@ public class ClientPage extends AppCompatActivity {
             //========Getting the Client reference===========
             database = FirebaseDatabase.getInstance();
             myRef = database.getReference("Client");
-
             //=======Drop down box setting============================================
             final Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
             String[] items = new String[]{"Select the language","Korean", "Chinese", "Japanese", "Spanish", "Arabian"};
@@ -76,9 +72,7 @@ public class ClientPage extends AppCompatActivity {
         }
         //===========Button Click Event for opening the mailbox============================
         public void onClick(View view) {
-
             Intent intent  = new Intent(this, ViewDatabase2.class);
             startActivity(intent);
-
         }
 }

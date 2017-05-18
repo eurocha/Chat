@@ -45,7 +45,6 @@ public class ViewDatabase2 extends AppCompatActivity {
     {
         final String TAG ="ViewDatabase";
         ArrayList<String> array = new ArrayList<>();
-
         //====adding strings to array===================
         for(DataSnapshot ds : dataSnapshot.getChildren())
         {
@@ -53,8 +52,6 @@ public class ViewDatabase2 extends AppCompatActivity {
         }
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
         listView.setAdapter(adapter);
-
-
     }
 
 }

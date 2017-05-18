@@ -1,5 +1,6 @@
 # Chat
 Steps you carried out for this process
+
 1.Made 2 buttons for the main page.
   Got the button id from the xml file.
   Made Button Click Event (To open new pages)

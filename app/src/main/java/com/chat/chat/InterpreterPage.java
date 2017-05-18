@@ -12,7 +12,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class InterpreterPage extends AppCompatActivity {
-
     FirebaseDatabase database;
     DatabaseReference myRef;
     //========Message setup=============
@@ -53,12 +52,8 @@ public class InterpreterPage extends AppCompatActivity {
     }
     //========Button Click Event for opening the Mailbox==========================
     public void onClick(View view) {
-
         Intent intent  = new Intent(this, ViewDatabase.class);
         startActivity(intent);
-
     }
-
-
 }
 
