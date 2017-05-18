@@ -3,58 +3,43 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
+    //===== Button Intializing==========//
+    Button btClient;
+    Button btInterpreter;
 
-    private static final String TAG = "MainActivity";
-
-    FirebaseDatabase database;
-    DatabaseReference myRef;
-    TextView tvMessage;
-    EditText etNewMessage;
-    Button btUpdate;
-    Button btButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, SubActivity.class);
-        tvMessage = (TextView) findViewById(R.id.tv_message);
-        etNewMessage = (EditText) findViewById(R.id.et_newData);
-        btUpdate = (Button) findViewById(R.id.bt_update);
-        btButton = (Button) findViewById(R.id.bt_button);
-
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("hihi");
-
-        //Button event
-        btUpdate.setOnClickListener(new View.OnClickListener() {
+        //=====intent initializing===================//
+        final Intent intent = new Intent(this, ClientPage.class);
+        final Intent intent2 = new Intent(this, InterpreterPage.class);
+        //====Get the Button Id from xml==========================//
+        btClient = (Button) findViewById(R.id.button1);
+        btInterpreter = (Button) findViewById(R.id.button2);
+        //==========Button1 setting==============================//
+        btClient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String newMessage = etNewMessage.getText().toString();
-                //myRef.setValue(newMessage);
-                myRef.push().setValue(newMessage);
-
+                startActivity(intent);
+            }
+        });
+        //=========Button2 setting==================================//
+        btInterpreter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent2);
             }
         });
     }
-
-
-
-
-        public void onClick(View view) {
-
-            Intent intent  = new Intent(this, SubActivity.class);
-            startActivity(intent);
-
-        }
-
-
-    }
+}
 

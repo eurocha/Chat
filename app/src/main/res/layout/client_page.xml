@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#171717"
-    tools:context="com.js.firebasedatabase_example.SubActivity">
+    tools:context="com.js.firebasedatabase_example.MainActivity">
 
     <TextView
         android:id="@+id/tv_message"
@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Type your message" />
-
     <EditText
         android:textColor="#FFFF"
         android:id="@+id/et_newData"
@@ -24,23 +23,29 @@
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
     <Button
         android:id="@+id/bt_update"
-        android:text="@string/resend"
-        android:layout_below="@+id/et_newData"
-        android:layout_centerHorizontal="true"
+        android:text="Send"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
     <Button
         android:id="@+id/button2"
         android:onClick = "onClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/mailbox"
-        android:layout_below="@+id/bt_update"
+        android:text="Mailbox"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/et_newData"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
